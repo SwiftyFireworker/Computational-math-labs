@@ -8,7 +8,9 @@
 #include <iostream>
 #include <vector>
 
+
 using T = double;
+
 
 T getDividedDifference(std::vector<T>::const_iterator xBegin, std::vector<T>::const_iterator xEnd,
                        std::vector<T>::const_iterator yBegin, std::vector<T>::const_iterator yEnd) {
@@ -38,6 +40,7 @@ T useNewtonPolynomial(const std::vector<T>& x, const std::vector<T>& y,
     return result;
 }
 
+
 void readData(int & n, std::vector<T> & x, std::vector<T> & y) {
     std::cout << "Enter number of points:\n";
     std::cin >> n;
@@ -51,13 +54,14 @@ void readData(int & n, std::vector<T> & x, std::vector<T> & y) {
     }
 }
 
+
 int main() {
     int n = 0;
     std::vector<T> x, y;
     readData(n, x, y);
     
     double point = 2010;
-    std::cout << "Newton's result for "<< point << " year: " << useNewtonPolynomial(x, y, point) << std::endl;
+    std::cout << "Newton's result for " << point << " year: " << useNewtonPolynomial(x, y, point) << std::endl;
     
     return 0;
 }
