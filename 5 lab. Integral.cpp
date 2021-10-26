@@ -45,7 +45,6 @@ public:
         result *= h / 3;
         return result;
     }
-    
 };
 
 
